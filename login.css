@@ -1,0 +1,95 @@
+/* the css page for the login and register page*/
+/* code referenced from https://bootsnipp.com/snippets/7nk08 */
+
+/* css code relating to the right hand side of the page*/
+body {
+    font-family: "Lato", sans-serif;
+    /* use !important when I want to override the bootstrap settings */
+    background-color: #000 !important;
+}
+
+.main-head{
+    height: 150px;
+    background: #000 !important;
+}
+
+label{
+    color: #fff !important;
+}
+
+/* css code for the sidenav which acts as the left hand of the page */
+.sidenav {
+    height: 100%;
+    /* used a custom image for the left hand side of the screen*/
+    background-image: url('/static/logo.jpg') !important;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* overwrites the bootstrap designs for the input boxes */
+input, input:focus
+{
+    border: none !important;
+    outline: none !important;
+}
+
+.main {
+    padding: 0px 10px;
+    background-color: #000 !important;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 60%;
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+a{
+    color: white;
+    text-decoration: underline;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}

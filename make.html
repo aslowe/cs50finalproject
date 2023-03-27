@@ -1,0 +1,31 @@
+{% extends "layoutmain.html" %}
+
+{% block main %}
+    <h1>
+        {# title to tell the user what to do #}
+        <center>
+            Enter Your Sentence Below!
+        </center>
+    </h1>
+    {# creates form whereby the user can input a sentence and submit it #}
+    <form action="/make" method="POST">
+        <div class="inputfield">
+            <input autocomplete="off" autofocus class="form-control shadow-none" id="sentence" name="sentence" placeholder="Sentence" type="text">
+            <div class = "buttons">
+                <button class="btn btn-primary" type="submit">Create</button>
+            </div>
+        </div>
+    </form>
+    {# changes the page depending on whether the sentence is valid #}
+    {% if not valid %}
+    <p>
+        {# tells the user to input a valid sentence #}
+        Please input a valid sentence!
+    </p>
+    {% else %}
+    <p>
+        {# tells the user their sentence has been successfully made into a playlist #}
+        Success creating playlist!
+    </p>
+    {% endif %}
+{% endblock %}

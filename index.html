@@ -1,0 +1,24 @@
+{% extends "layoutmain.html" %}
+
+{% block main %}
+    <div>
+        <h1>
+            {# prints a welcome to the user and is personalised using their username#}
+            <center>
+                Hello {{item}} Welcome to the Playlist Maker!
+            </center>
+        </h1>
+        {# shows instructions on how to use the program #}
+        <h2>
+            Usage
+        </h2>
+            <ul>
+                <li>Enter a sentence (or more) in the input box on the Make page, the majority of songs are in English but there may exist songs in other languages however there may be less success with those</li>
+                <li>Don't worry about the capitalisation of words!</li>
+                <li>If you are using punctuation put a space e.g. "Hello." would be written as "Hello ."</li>
+                <li>There are a lot of songs in the database so it may take a while - please be patient!</li>
+                <li>If a song with the word doesn't exist then the program will ask you to enter it again!</li>
+                <li>If you enter a sentence with lots of the same words then it may not work as each song in the playlist is unique!</li>
+            </ul>
+    </div>
+{% endblock %}

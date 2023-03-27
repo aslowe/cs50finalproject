@@ -1,0 +1,38 @@
+{# this is the template for the login and register page#}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        {# adds the bootstrap links#}
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <link href="/static/login.css" rel="stylesheet">
+        <title>Playlist Maker</title>
+   </head>
+   <body>
+      {# adds the text for the side nav#}
+      <div class="sidenav">
+         <div class="login-main-text">
+            <h2>
+               Playlist Maker
+               <br>
+               Login Page
+            </h2>
+            <p>Login or register from here to access.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               {# creates a block whereby the input form is changed depending on which page you are on - login or register#}
+               {% block main %}
+               {% endblock %}
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,32 @@
+{# This is the layout page for the main pages of the website#}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/main.css" rel="stylesheet">
+  </head>
+  <body>
+      {# this is the block for the sidenav and linking them to the other pages code referenced from https://www.w3schools.com/howto/howto_js_sidenav.asp #}
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/">Home</a>
+      <a href="/make">Make</a>
+      <a href="/view">View</a>
+      <a href="/logout">Logout</a>
+    </div>
+    <span class = "openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    {# creates a block to put the main information! #}
+    {% block main %}
+    {% endblock %}
+    {# adds the javascript for the functionality of the sidenav bar #}
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
+</html>

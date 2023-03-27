@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block main %}
+  {# creates form for user to register #}
+  <form action="/register" method="post">
+      <div class="form-group">
+        {# lets user enter a username #}
+        <label>User Name</label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+      </div>
+      <div class="form-group">
+        {# lets user enter a password #}
+        <label>Password</label>
+        <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+      </div>
+      <div class="form-group">
+        {# makes user enter their password again #}
+        <label>Password</label>
+        <input class="form-control mx-auto w-auto" id="again" name="confirmation" placeholder="Password (again)" type="password">
+      </div>
+      {# gives the user to submit and register or to switch to the login page #}
+      <a href = '/login'>Login</a>
+      <button type="submit" class="btn btn-secondary shadow-none">Register</button>
+  </form>
+{% endblock %}

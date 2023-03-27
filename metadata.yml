@@ -1,0 +1,12 @@
+---
+:id: 152902391
+:submitters:
+- :name: Annabel Sara Lowe
+  :email: aslowe@college.harvard.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2022-12-07 02:57:20.328029000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2022-12-06 18:57:20.328029000 Z
+:status: processed
+:score: 21.0

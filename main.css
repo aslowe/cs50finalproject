@@ -1,0 +1,110 @@
+/* the css page for the main website*/
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #111;
+}
+
+/* sets all the writing to be the green spotify colour*/
+h1, h2, li, p, .openbtn{
+  color: #1DB954;
+}
+
+/* code for everything related to sidenav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1DB954;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* code relating to the input field and making sure it fits the colour scheme*/
+input, input:focus
+{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 20%;
+  border: none !important;
+  outline: none !important;
+  text-align: center;
+  background-color: #1DB954;
+}
+
+/* ensures the button is below the input field*/
+.buttons
+{
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* overwrites the bootstrap code relating to the buttons*/
+.btn
+{
+  background-color: #1DB954 !important;
+  border:none !important;
+}
+.btn:hover
+{
+  background-color: #white !important;
+  border:white;
+}
+
+/* code for the tables*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: #1DB954;
+}
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+/* changes every other row of the table to be green and black not black and green*/
+tr:nth-child(even) {
+  background-color: #1DB954;
+  color: black;
+}

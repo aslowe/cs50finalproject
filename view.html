@@ -1,0 +1,40 @@
+{% extends "layoutmain.html" %}
+{% block main %}
+    <h1>
+        {# title of the page #}
+        <center>
+            History of Playlists
+        </center>
+    </h1>
+    {# iterates through each playlist in the user's history #}
+    {% for item in list %}
+    <h1>
+        {# loops through the songs in the playlist #}
+        {% for playlist in item %}
+        {# only does it once so that the title of the playlist is only printed once #}
+        {%   if loop.first %}
+        {{playlist["playlistName"]}}
+        {%   endif %}
+        {%endfor%}
+    </h1>
+    {# creates a table with the title, album, and artist of each song in the playlist #}
+    <table>
+        <thead>
+            <th>Song</th>
+            <th>Album</th>
+            <th>Artist</th>
+        </thead>
+        <tbody>
+            {# loops through the songs in the playlist and prints the title, album, and artist#}
+            {% for playlist in item %}
+            <tr>
+                <td> {{ playlist["song"]}}</td>
+                <td> {{ playlist["album"]}}</td>
+                <td> {{ playlist["artist"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+{% endfor %}
+{% endblock %}

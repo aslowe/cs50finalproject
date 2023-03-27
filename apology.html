@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    {# adds the image for the apology and then the text on top - code referenced from the Finance PSET#}
+    <!-- https://memegen.link/ -->
+    <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png&width=400" title="{{ top }}">
+    {# centers the links for the user to go back to either login or register#}
+    <center>
+        <a href = '/login'>Login</a>
+        <a href = '/register'>Register</a>
+    </center>
+{% endblock %}
